@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     
     <link rel="stylesheet" href="css/style.css" >
 </head>
@@ -26,16 +27,13 @@
           <li><a href="mailto:caohungphuvn@gmail.com"><i class="fa fa-envelope"></i></a></li>        
         </ul>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-    <script>
-        var options = {
-            strings: ["Hi! I'm Cao Hung Phu", "Welcome to my site"],
-            typeSpeed: 30,
-            backSpeed: 30,
-            loop: true
-        };
-        var typed = new Typed('.typing', options);
-    </script>
+    <div id="music" class="music" onclick="playAudio()">
+        <div id="layer_1" class="layer_1">
+            <img id="img_main" class="img_main" src="images/play_button.png">
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/music.js"></script>
 </body>
 
 </html>
