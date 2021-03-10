@@ -1,6 +1,16 @@
-audio_background = new Audio("../music/1.mp3");
+let list_audio = ['1.mp3', '2.mp3', '3.mp3', '4.mp3'];
+let list_audio_thump = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'];
 
+function random(lists) {
+    return lists[Math.floor(Math.random()*lists.length)]
+}
+
+audio_background = new Audio("../music/" + random(list_audio));
 let isPlaying = false;
+
+function getImageThump(){
+    return "images/music/" + random(list_audio_thump);
+}
 
 function playAudio() {
     if (!isPlaying)
@@ -43,7 +53,7 @@ let css_img_main_new = `
 function playTrack() {
     audio_background.play();
     isPlaying = true;  
-    document.getElementById('img_main').src = "images/soda.jpg";
+    document.getElementById('img_main').src = getImageThump();
     document.getElementById('layer_1').style.cssText = css_layer_1_new;
     document.getElementById('img_main').style.cssText = css_img_main_new;
     document.getElementsByTagName('html')[0].style.cssText = css_html_new;
